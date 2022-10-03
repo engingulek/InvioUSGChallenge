@@ -22,6 +22,8 @@
 		7D3B1D7628EB1B630029BB5B /* SearchPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7528EB1B630029BB5B /* SearchPageRouter.swift */; };
 		7D3B1D7828EB1B730029BB5B /* SearchPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7728EB1B730029BB5B /* SearchPageProtocols.swift */; };
 		7D3B1D7A28EB1B830029BB5B /* SearchPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7928EB1B830029BB5B /* SearchPagePresenter.swift */; };
+		7D3B1D7C28EB3A760029BB5B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7B28EB3A760029BB5B /* Movie.swift */; };
+		7D3B1D7E28EB3D770029BB5B /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		7D3B1D7528EB1B630029BB5B /* SearchPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageRouter.swift; sourceTree = "<group>"; };
 		7D3B1D7728EB1B730029BB5B /* SearchPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageProtocols.swift; sourceTree = "<group>"; };
 		7D3B1D7928EB1B830029BB5B /* SearchPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPagePresenter.swift; sourceTree = "<group>"; };
+		7D3B1D7B28EB3A760029BB5B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 		7D3B1D4A28EAEC270029BB5B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7D3B1D7B28EB3A760029BB5B /* Movie.swift */,
+				7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -285,9 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3B1D3928EAEA670029BB5B /* SearchViewController.swift in Sources */,
+				7D3B1D7E28EB3D770029BB5B /* MovieResult.swift in Sources */,
 				7D3B1D7628EB1B630029BB5B /* SearchPageRouter.swift in Sources */,
 				7D3B1D3528EAEA670029BB5B /* AppDelegate.swift in Sources */,
 				7D3B1D6C28EB193D0029BB5B /* MovieDetailPageViewController.swift in Sources */,
+				7D3B1D7C28EB3A760029BB5B /* Movie.swift in Sources */,
 				7D3B1D3728EAEA670029BB5B /* SceneDelegate.swift in Sources */,
 				7D3B1D7828EB1B730029BB5B /* SearchPageProtocols.swift in Sources */,
 				7D3B1D6928EB05980029BB5B /* SearchPageCollectionViewCell.swift in Sources */,

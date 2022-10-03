@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 class SearchPageInteractor : PresenterToInteractorSearchPageProtocol {
     var searhPagePresenter: InteractorToPresenterSearchPageProtocl?
     
