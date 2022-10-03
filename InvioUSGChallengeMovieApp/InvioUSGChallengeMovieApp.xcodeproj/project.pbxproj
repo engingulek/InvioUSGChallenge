@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D3B1D3528EAEA670029BB5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3428EAEA670029BB5B /* AppDelegate.swift */; };
 		7D3B1D3728EAEA670029BB5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3628EAEA670029BB5B /* SceneDelegate.swift */; };
-		7D3B1D3928EAEA670029BB5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3828EAEA670029BB5B /* ViewController.swift */; };
+		7D3B1D3928EAEA670029BB5B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3828EAEA670029BB5B /* SearchViewController.swift */; };
 		7D3B1D3C28EAEA670029BB5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3A28EAEA670029BB5B /* Main.storyboard */; };
 		7D3B1D3E28EAEA6A0029BB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3D28EAEA6A0029BB5B /* Assets.xcassets */; };
 		7D3B1D4128EAEA6A0029BB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3F28EAEA6A0029BB5B /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		7D3B1D3128EAEA670029BB5B /* InvioUSGChallengeMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvioUSGChallengeMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3B1D3428EAEA670029BB5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3B1D3628EAEA670029BB5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D3B1D3828EAEA670029BB5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D3B1D3828EAEA670029BB5B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7D3B1D3B28EAEA670029BB5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D3B1D3D28EAEA6A0029BB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3B1D4028EAEA6A0029BB5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,119 @@
 		7D3B1D3328EAEA670029BB5B /* InvioUSGChallengeMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D3B1D4B28EAEC3D0029BB5B /* movieDetailPage-model */,
+				7D3B1D4A28EAEC270029BB5B /* Entity */,
+				7D3B1D4828EAEC0E0029BB5B /* searchPage-model */,
 				7D3B1D3428EAEA670029BB5B /* AppDelegate.swift */,
 				7D3B1D3628EAEA670029BB5B /* SceneDelegate.swift */,
-				7D3B1D3828EAEA670029BB5B /* ViewController.swift */,
 				7D3B1D3A28EAEA670029BB5B /* Main.storyboard */,
 				7D3B1D3D28EAEA6A0029BB5B /* Assets.xcassets */,
 				7D3B1D3F28EAEA6A0029BB5B /* LaunchScreen.storyboard */,
 				7D3B1D4228EAEA6A0029BB5B /* Info.plist */,
 			);
 			path = InvioUSGChallengeMovieApp;
+			sourceTree = "<group>";
+		};
+		7D3B1D4828EAEC0E0029BB5B /* searchPage-model */ = {
+			isa = PBXGroup;
+			children = (
+				7D3B1D5528EAECEE0029BB5B /* protocol */,
+				7D3B1D5428EAECE30029BB5B /* router */,
+				7D3B1D5328EAECCE0029BB5B /* presenter */,
+				7D3B1D5228EAECC60029BB5B /* interactor */,
+				7D3B1D5128EAECBD0029BB5B /* view */,
+			);
+			path = "searchPage-model";
+			sourceTree = "<group>";
+		};
+		7D3B1D4A28EAEC270029BB5B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7D3B1D4B28EAEC3D0029BB5B /* movieDetailPage-model */ = {
+			isa = PBXGroup;
+			children = (
+				7D3B1D5028EAEC8B0029BB5B /* interactor */,
+				7D3B1D4F28EAEC7F0029BB5B /* router */,
+				7D3B1D4E28EAEC750029BB5B /* presenter */,
+				7D3B1D4D28EAEC6C0029BB5B /* protocol */,
+				7D3B1D4C28EAEC5C0029BB5B /* view */,
+			);
+			path = "movieDetailPage-model";
+			sourceTree = "<group>";
+		};
+		7D3B1D4C28EAEC5C0029BB5B /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7D3B1D4D28EAEC6C0029BB5B /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		7D3B1D4E28EAEC750029BB5B /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7D3B1D4F28EAEC7F0029BB5B /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		7D3B1D5028EAEC8B0029BB5B /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7D3B1D5128EAECBD0029BB5B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7D3B1D3828EAEA670029BB5B /* SearchViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7D3B1D5228EAECC60029BB5B /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7D3B1D5328EAECCE0029BB5B /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7D3B1D5428EAECE30029BB5B /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		7D3B1D5528EAECEE0029BB5B /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D3B1D3928EAEA670029BB5B /* ViewController.swift in Sources */,
+				7D3B1D3928EAEA670029BB5B /* SearchViewController.swift in Sources */,
 				7D3B1D3528EAEA670029BB5B /* AppDelegate.swift in Sources */,
 				7D3B1D3728EAEA670029BB5B /* SceneDelegate.swift in Sources */,
 			);
