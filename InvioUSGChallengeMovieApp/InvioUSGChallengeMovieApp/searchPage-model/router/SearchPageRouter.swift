@@ -11,6 +11,7 @@ import Foundation
 class SearchPageRouter : PresenterToRouterSearchPageProtocol{
     static func creteModel(ref: SearchViewController) {
         let presenter  = SearchPagePresenter()
+        
         ref.searchPageObject = presenter
         ref.searchPageObject?.interactor = SearchPageInteractor()
         ref.searchPageObject?.interactor?.searhPagePresenter = presenter

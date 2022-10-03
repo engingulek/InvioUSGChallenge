@@ -249,6 +249,7 @@
                     <navigationItem key="navigationItem" title="Movie Name" id="QWh-FK-f3A"/>
                     <connections>
                         <outlet property="movieImageView" destination="q5m-vm-h82" id="qpw-a1-eHZ"/>
+                        <outlet property="movieName" destination="AcP-f8-dmz" id="YHc-9c-vXl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oT4-56-pAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

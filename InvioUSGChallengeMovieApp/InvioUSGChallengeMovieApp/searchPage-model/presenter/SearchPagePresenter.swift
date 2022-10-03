@@ -23,6 +23,7 @@ class SearchPagePresenter : ViewtoPresenterSearchPageProtocol {
 }
 
 
+
 extension SearchPagePresenter : InteractorToPresenterSearchPageProtocl {
     func toPresenter(movieList: Array<Movie>) {
         print("Presenter \(movieList)")

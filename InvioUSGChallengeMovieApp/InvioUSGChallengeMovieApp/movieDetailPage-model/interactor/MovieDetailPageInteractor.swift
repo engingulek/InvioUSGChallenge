@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+class MovieDetailPageInteractor : PresenterToInteractorMovieDetailPageProtocol {
+    var movieDetailPagePresenter: InteractorToPresenterMovieDetailPageProtocol?
+    
+    func getMovieDetail(movieImdbId: String) {
+        
+    }
+    
+    
+}

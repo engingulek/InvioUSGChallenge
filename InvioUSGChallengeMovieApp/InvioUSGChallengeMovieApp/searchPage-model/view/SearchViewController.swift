@@ -74,7 +74,8 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toMovieDetail", sender: nil)
+        let movieImdbId = movieList[indexPath.item].imdbID
+        performSegue(withIdentifier: "toMovieDetail", sender: movieImdbId)
     }
     
     // MARK: - MovieCollectionViewUIDesign
@@ -95,6 +96,17 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
         let cancelAlertAction = UIAlertAction(title: "OKey", style: .cancel)
         alert.addAction(cancelAlertAction)
         self.present(alert, animated: true)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMovieDetail" {
+            if let imdbId = sender as? String {
+                let toViewController = segue.destination as! MovieDetailPageViewController
+                toViewController.movieImdbId = imdbId
+            }
+            
+        }
     }
     
     

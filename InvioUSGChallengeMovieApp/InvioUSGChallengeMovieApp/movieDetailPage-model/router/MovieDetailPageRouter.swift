@@ -11,8 +11,12 @@ import Foundation
 class MovieDetailPageRouter : PresenterToRouterMovieDetailPageProtocol {
     static func createModel(ref: MovieDetailPageViewController) {
         let presenter = MovieDetailPagePresenter()
+        ref.movieDetailPageObject = presenter
         ref.movieDetailPageObject?.interactor = MovieDetailPageInteractor()
         ref.movieDetailPageObject?.interactor?.movieDetailPagePresenter = presenter
+        ref.movieDetailPageObject?.movieDetailPageView = ref
+       
+ 
     }
     
     
