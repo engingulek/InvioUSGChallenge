@@ -30,6 +30,7 @@
 		7DFDAA8B28EB7638004ED57B /* MovieDetailPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8A28EB7638004ED57B /* MovieDetailPageRouter.swift */; };
 		7DFDAA8D28EB769D004ED57B /* MovieDetailPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8C28EB769C004ED57B /* MovieDetailPagePresenter.swift */; };
 		7DFDAA8F28EB7DE7004ED57B /* MovieDetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8E28EB7DE7004ED57B /* MovieDetailPageInteractor.swift */; };
+		7DFDAA9128EB8AF3004ED57B /* MovieDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA9028EB8AF3004ED57B /* MovieDetailResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		7DFDAA8A28EB7638004ED57B /* MovieDetailPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPageRouter.swift; sourceTree = "<group>"; };
 		7DFDAA8C28EB769C004ED57B /* MovieDetailPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPagePresenter.swift; sourceTree = "<group>"; };
 		7DFDAA8E28EB7DE7004ED57B /* MovieDetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPageInteractor.swift; sourceTree = "<group>"; };
+		7DFDAA9028EB8AF3004ED57B /* MovieDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				7DFDAA8828EB7568004ED57B /* MovieDetail.swift */,
+				7DFDAA9028EB8AF3004ED57B /* MovieDetailResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFDAA9128EB8AF3004ED57B /* MovieDetailResult.swift in Sources */,
 				7DFDAA8B28EB7638004ED57B /* MovieDetailPageRouter.swift in Sources */,
 				7DFDAA8D28EB769D004ED57B /* MovieDetailPagePresenter.swift in Sources */,
 				7DFDAA8628EB730E004ED57B /* MovieDetailPageProtocols.swift in Sources */,

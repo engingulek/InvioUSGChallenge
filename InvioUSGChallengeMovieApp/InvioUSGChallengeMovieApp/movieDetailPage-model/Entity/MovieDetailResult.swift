@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct MovieDetailResult : Codable{
+    var movie:MovieDetail?
+}
