@@ -39,6 +39,9 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
         cell.layer.cornerRadius = 20
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toMovieDetail", sender: nil)
+    }
     
     // MARK: - MovieCollectionViewUIDesign
     private func setupUI() {
