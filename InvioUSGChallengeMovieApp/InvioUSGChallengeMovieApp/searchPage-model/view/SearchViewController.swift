@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchViewController: UIViewController {
     @IBOutlet private weak var movieCollectionView: UICollectionView!
     var searchPageObject :  ViewtoPresenterSearchPageProtocol?
+    var movieList = [Movie]()
     
     @IBOutlet weak var searchMovieTextField: UITextField!
     override func viewDidLoad() {
@@ -31,7 +33,11 @@ extension SearchViewController {
         if searchMovieTextField.text == "" {
             alertMessage(title: "Error", message: "Enter Movie to Search")
         }else{
-            searchPageObject?.getMovieAction()
+            let searchText = searchMovieTextField.text?.capitalizeFirstLetter()
+            
+                self.searchPageObject?.getMovieAction(searchText: searchText!)
+          
+            
 
         }
     }
@@ -39,11 +45,12 @@ extension SearchViewController {
 }
 
 extension SearchViewController : PresenterToViewSearchPageProtocol {
-    func toView(movieList: String) {
-        print("Get Data \(movieList)")
+    func toView(movieList: Array<Movie>) {
+        self.movieList = movieList
+        DispatchQueue.main.async {
+            self.movieCollectionView.reloadData()
+        }
     }
-    
-    
 }
 
 
@@ -53,12 +60,17 @@ extension SearchViewController : PresenterToViewSearchPageProtocol {
 // MARK: -SeachViewMoviewCollectionComtroller
 extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.movieList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : SearchPageCollectionViewCell = movieCollectionView.dequeueReusableCell(withReuseIdentifier: "movieImageCell", for: indexPath) as! SearchPageCollectionViewCell
-        cell.layer.cornerRadius = 20
+        let movie = movieList[indexPath.item]
+        let imageUrl = URL(string: movie.Poster!)
+        cell.movieImage.kf.setImage(with: imageUrl)
+        cell.movieName.text = movie.Title
+        
+        cell.layer.cornerRadius = 18
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -72,7 +84,7 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
         let widthMCV = self.movieCollectionView.frame.size.width
         let heightMCV =  self.movieCollectionView.frame.size.height
         design.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-        design.itemSize = CGSize(width: widthMCV/2.5, height: heightMCV/3)
+        design.itemSize = CGSize(width: widthMCV/2.5, height: heightMCV/2.5)
         design.minimumLineSpacing = 25
         design.minimumInteritemSpacing = 10
         movieCollectionView.collectionViewLayout = design

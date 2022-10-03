@@ -10,21 +10,21 @@ import Foundation
 protocol ViewtoPresenterSearchPageProtocol {
     var interactor : PresenterToInteractorSearchPageProtocol? {get set}
     var searchPageView : PresenterToViewSearchPageProtocol? {get set}
-    func getMovieAction()
+    func getMovieAction(searchText:String)
 }
 
 
 protocol PresenterToInteractorSearchPageProtocol {
     var searhPagePresenter : InteractorToPresenterSearchPageProtocl? {get set}
-    func getMovie()
+    func getMovie(searchText:String)
     
 }
 
 protocol InteractorToPresenterSearchPageProtocl {
-    func toPresenter (movieList:String)
+    func toPresenter (movieList:Array<Movie>)
 }
 protocol PresenterToViewSearchPageProtocol {
-    func toView(movieList:String)
+    func toView(movieList:Array<Movie>)
 }
 
 protocol PresenterToRouterSearchPageProtocol {

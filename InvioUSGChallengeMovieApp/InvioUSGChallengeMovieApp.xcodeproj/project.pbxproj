@@ -24,6 +24,7 @@
 		7D3B1D7A28EB1B830029BB5B /* SearchPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7928EB1B830029BB5B /* SearchPagePresenter.swift */; };
 		7D3B1D7C28EB3A760029BB5B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7B28EB3A760029BB5B /* Movie.swift */; };
 		7D3B1D7E28EB3D770029BB5B /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */; };
+		7D3B1D8128EB42700029BB5B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D8028EB42700029BB5B /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7D3B1D7928EB1B830029BB5B /* SearchPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPagePresenter.swift; sourceTree = "<group>"; };
 		7D3B1D7B28EB3A760029BB5B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
+		7D3B1D8028EB42700029BB5B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		7D3B1D3328EAEA670029BB5B /* InvioUSGChallengeMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D3B1D7F28EB425A0029BB5B /* Extensions */,
 				7D3B1D4B28EAEC3D0029BB5B /* movieDetailPage-model */,
 				7D3B1D4A28EAEC270029BB5B /* Entity */,
 				7D3B1D4828EAEC0E0029BB5B /* searchPage-model */,
@@ -210,6 +213,14 @@
 			path = SearhCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		7D3B1D7F28EB425A0029BB5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7D3B1D8028EB42700029BB5B /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,6 +305,7 @@
 				7D3B1D7E28EB3D770029BB5B /* MovieResult.swift in Sources */,
 				7D3B1D7628EB1B630029BB5B /* SearchPageRouter.swift in Sources */,
 				7D3B1D3528EAEA670029BB5B /* AppDelegate.swift in Sources */,
+				7D3B1D8128EB42700029BB5B /* String+Extensions.swift in Sources */,
 				7D3B1D6C28EB193D0029BB5B /* MovieDetailPageViewController.swift in Sources */,
 				7D3B1D7C28EB3A760029BB5B /* Movie.swift in Sources */,
 				7D3B1D3728EAEA670029BB5B /* SceneDelegate.swift in Sources */,
