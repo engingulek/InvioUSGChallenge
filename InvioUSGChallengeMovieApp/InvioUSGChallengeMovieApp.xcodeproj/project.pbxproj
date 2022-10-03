@@ -13,6 +13,8 @@
 		7D3B1D3C28EAEA670029BB5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3A28EAEA670029BB5B /* Main.storyboard */; };
 		7D3B1D3E28EAEA6A0029BB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3D28EAEA6A0029BB5B /* Assets.xcassets */; };
 		7D3B1D4128EAEA6A0029BB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3F28EAEA6A0029BB5B /* LaunchScreen.storyboard */; };
+		7D3B1D6928EB05980029BB5B /* SearchPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D6728EB05980029BB5B /* SearchPageCollectionViewCell.swift */; };
+		7D3B1D6A28EB05980029BB5B /* SearchPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B1D6828EB05980029BB5B /* SearchPageCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7D3B1D3D28EAEA6A0029BB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3B1D4028EAEA6A0029BB5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D3B1D4228EAEA6A0029BB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D3B1D6728EB05980029BB5B /* SearchPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		7D3B1D6828EB05980029BB5B /* SearchPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchPageCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		7D3B1D5128EAECBD0029BB5B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7D3B1D5A28EB04780029BB5B /* SearhCollectionViewCell */,
 				7D3B1D3828EAEA670029BB5B /* SearchViewController.swift */,
 			);
 			path = view;
@@ -169,6 +174,15 @@
 			children = (
 			);
 			path = protocol;
+			sourceTree = "<group>";
+		};
+		7D3B1D5A28EB04780029BB5B /* SearhCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7D3B1D6728EB05980029BB5B /* SearchPageCollectionViewCell.swift */,
+				7D3B1D6828EB05980029BB5B /* SearchPageCollectionViewCell.xib */,
+			);
+			path = SearhCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +245,7 @@
 			files = (
 				7D3B1D4128EAEA6A0029BB5B /* LaunchScreen.storyboard in Resources */,
 				7D3B1D3E28EAEA6A0029BB5B /* Assets.xcassets in Resources */,
+				7D3B1D6A28EB05980029BB5B /* SearchPageCollectionViewCell.xib in Resources */,
 				7D3B1D3C28EAEA670029BB5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +260,7 @@
 				7D3B1D3928EAEA670029BB5B /* SearchViewController.swift in Sources */,
 				7D3B1D3528EAEA670029BB5B /* AppDelegate.swift in Sources */,
 				7D3B1D3728EAEA670029BB5B /* SceneDelegate.swift in Sources */,
+				7D3B1D6928EB05980029BB5B /* SearchPageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
