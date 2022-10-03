@@ -8,9 +8,10 @@
 import Foundation
 
 
-class HomePagePresenter : ViewtoPresenterSearchPageProtocol {
+class SearchPagePresenter : ViewtoPresenterSearchPageProtocol {
     func getMovieAction() {
         interactor?.getMovie()
+        print("oldu 2")
     }
     
     var interactor: PresenterToInteractorSearchPageProtocol?
@@ -21,7 +22,7 @@ class HomePagePresenter : ViewtoPresenterSearchPageProtocol {
 }
 
 
-extension HomePagePresenter : InteractorToPresenterSearchPageProtocl {
+extension SearchPagePresenter : InteractorToPresenterSearchPageProtocl {
     func toPresenter(movieList: String) {
         searchPageView?.toView(movieList: movieList)
     }

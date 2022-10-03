@@ -9,25 +9,47 @@ import UIKit
 
 class SearchViewController: UIViewController {
     @IBOutlet private weak var movieCollectionView: UICollectionView!
+    var searchPageObject :  ViewtoPresenterSearchPageProtocol?
     
     @IBOutlet weak var searchMovieTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        SearchPageRouter.creteModel(ref: self)
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
         self.movieCollectionView.register(UINib(nibName: "SearchPageCollectionViewCell", bundle: nil),forCellWithReuseIdentifier:"movieImageCell")
         setupUI()
     }
     
+  
+    
+}
+
+// MARK : -Search Action fetch connet
+extension SearchViewController {
     @IBAction func searchMovieAction(_ sender: Any) {
         if searchMovieTextField.text == "" {
             alertMessage(title: "Error", message: "Enter Movie to Search")
         }else{
-            print(searchMovieTextField.text!)
+            searchPageObject?.getMovieAction()
+
         }
     }
     
 }
+
+extension SearchViewController : PresenterToViewSearchPageProtocol {
+    func toView(movieList: String) {
+        print("Get Data \(movieList)")
+    }
+    
+    
+}
+
+
+
+
+
 // MARK: -SeachViewMoviewCollectionComtroller
 extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

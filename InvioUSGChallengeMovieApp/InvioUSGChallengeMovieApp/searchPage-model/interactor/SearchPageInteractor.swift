@@ -6,3 +6,12 @@
 //
 
 import Foundation
+class SearchPageInteractor : PresenterToInteractorSearchPageProtocol {
+    var searhPagePresenter: InteractorToPresenterSearchPageProtocl?
+    
+    func getMovie() {
+        self.searhPagePresenter?.toPresenter(movieList: "gelen data")
+    }
+    
+    
+}

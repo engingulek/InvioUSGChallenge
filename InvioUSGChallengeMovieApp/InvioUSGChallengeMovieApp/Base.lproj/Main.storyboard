@@ -72,7 +72,7 @@
         <!--Movie Name-->
         <scene sceneID="Yx5-2H-7Ct">
             <objects>
-                <viewController id="Vle-Ck-jFt" sceneMemberID="viewController">
+                <viewController id="Vle-Ck-jFt" customClass="MovieDetailPageViewController" customModule="InvioUSGChallengeMovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGB-Ik-bnZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,6 +247,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie Name" id="QWh-FK-f3A"/>
+                    <connections>
+                        <outlet property="movieImageView" destination="q5m-vm-h82" id="qpw-a1-eHZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oT4-56-pAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
