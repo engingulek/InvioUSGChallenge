@@ -7,7 +7,6 @@
 
 import UIKit
 import Kingfisher
-import SDWebImage
 import Lottie
 class SearchViewController: UIViewController {
     @IBOutlet private weak var movieCollectionView: UICollectionView!
