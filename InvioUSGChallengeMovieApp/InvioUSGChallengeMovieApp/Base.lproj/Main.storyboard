@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bqw-ZZ-UuP">
-                                <rect key="frame" x="0.0" y="220.5" width="414" height="641.5"/>
+                                <rect key="frame" x="0.0" y="260.5" width="414" height="601.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8lM-Vk-ZWS">
                                     <size key="itemSize" width="172" height="258"/>
@@ -41,26 +41,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-Vj-hRA">
+                                <rect key="frame" x="20" y="219" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Qd8-Vj-hRA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1aF-jj-UXF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qd8-Vj-hRA" secondAttribute="trailing" constant="20" id="3e2-Qn-Tx1"/>
                             <constraint firstItem="bqw-ZZ-UuP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Wg-g9-Xq3"/>
                             <constraint firstItem="wNg-s9-Asb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9rE-A4-TG2"/>
+                            <constraint firstItem="Qd8-Vj-hRA" firstAttribute="top" secondItem="jkW-bV-2kM" secondAttribute="bottom" constant="18.5" id="KJr-el-agL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqw-ZZ-UuP" secondAttribute="trailing" id="Kal-f0-AUh"/>
                             <constraint firstItem="wNg-s9-Asb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="M8T-Rh-VbO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wNg-s9-Asb" secondAttribute="trailing" constant="10" id="PtA-lK-dTj"/>
+                            <constraint firstItem="Qd8-Vj-hRA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WPb-LI-EQI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jkW-bV-2kM" secondAttribute="trailing" constant="10" id="Y4f-SC-HeT"/>
                             <constraint firstItem="jkW-bV-2kM" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.05" id="YpS-Xa-uHa"/>
                             <constraint firstItem="jkW-bV-2kM" firstAttribute="top" secondItem="wNg-s9-Asb" secondAttribute="bottom" constant="20" id="kzo-2O-rOP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bqw-ZZ-UuP" secondAttribute="bottom" id="rMk-DF-6lM"/>
                             <constraint firstItem="jkW-bV-2kM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="t6f-GK-Paf"/>
-                            <constraint firstItem="bqw-ZZ-UuP" firstAttribute="top" secondItem="jkW-bV-2kM" secondAttribute="bottom" constant="20" id="teP-tS-ISZ"/>
+                            <constraint firstItem="bqw-ZZ-UuP" firstAttribute="top" secondItem="jkW-bV-2kM" secondAttribute="bottom" constant="60" id="teP-tS-ISZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie App" id="5QR-DL-MMd"/>
                     <connections>
                         <outlet property="movieCollectionView" destination="bqw-ZZ-UuP" id="CnD-8Q-FIK"/>
+                        <outlet property="movieResultCountLabel" destination="Qd8-Vj-hRA" id="f8x-Fy-Dbc"/>
                         <outlet property="searchMovieTextField" destination="wNg-s9-Asb" id="W91-Za-LxX"/>
                         <segue destination="Vle-Ck-jFt" kind="show" identifier="toMovieDetail" id="CXP-5B-2Tc"/>
                     </connections>
@@ -161,7 +172,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kMN-xB-MKE">
                                 <rect key="frame" x="20" y="659" width="374" height="116.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

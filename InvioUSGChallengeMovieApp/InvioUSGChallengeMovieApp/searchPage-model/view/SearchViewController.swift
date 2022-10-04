@@ -11,20 +11,18 @@ import Kingfisher
 class SearchViewController: UIViewController {
     @IBOutlet private weak var movieCollectionView: UICollectionView!
     var searchPageObject :  ViewtoPresenterSearchPageProtocol?
+    @IBOutlet weak var movieResultCountLabel: UILabel!
     var movieList = [Movie]()
-    
     @IBOutlet weak var searchMovieTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchPageRouter.creteModel(ref: self)
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
+        movieResultCountLabel.isHidden = true
         self.movieCollectionView.register(UINib(nibName: "SearchPageCollectionViewCell", bundle: nil),forCellWithReuseIdentifier:"movieImageCell")
         setupUI()
     }
-    
-  
-    
 }
 
 // MARK : -Search Action fetch connet
@@ -34,28 +32,26 @@ extension SearchViewController {
             alertMessage(title: "Error", message: "Enter Movie to Search")
         }else{
             let searchText = searchMovieTextField.text?.capitalizeFirstLetter()
-            
-                self.searchPageObject?.getMovieAction(searchText: searchText!)
-          
-            
-
+            self.searchPageObject?.getMovieAction(searchText: searchText!)
         }
     }
-    
 }
 
 extension SearchViewController : PresenterToViewSearchPageProtocol {
     func toView(movieList: Array<Movie>) {
         self.movieList = movieList
         DispatchQueue.main.async {
+            print("Count movie \(self.movieList.count)")
+            if self.movieList.count == 0 {
+                self.alertMessage(title: "Error", message: "No Movies")
+                self.searchMovieTextField.text = ""
+            }
             self.movieCollectionView.reloadData()
+            self.movieResultCountLabel.isHidden = false
+            self.movieResultCountLabel.text = "\(self.movieList.count) Movies"
         }
     }
 }
-
-
-
-
 
 // MARK: -SeachViewMoviewCollectionComtroller
 extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataSource {
@@ -69,10 +65,10 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
         let imageUrl = URL(string: movie.Poster!)
         cell.movieImage.kf.setImage(with: imageUrl)
         cell.movieName.text = movie.Title
-        
         cell.layer.cornerRadius = 18
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let movieImdbId = movieList[indexPath.item].imdbID
         performSegue(withIdentifier: "toMovieDetail", sender: movieImdbId)
@@ -90,6 +86,7 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
         design.minimumInteritemSpacing = 10
         movieCollectionView.collectionViewLayout = design
     }
+    
     // MARK: -AlertMessage
     private func alertMessage(title:String,message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -105,11 +102,8 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
                 let toViewController = segue.destination as! MovieDetailPageViewController
                 toViewController.movieImdbId = imdbId
             }
-            
         }
     }
-    
-    
 }
 
 

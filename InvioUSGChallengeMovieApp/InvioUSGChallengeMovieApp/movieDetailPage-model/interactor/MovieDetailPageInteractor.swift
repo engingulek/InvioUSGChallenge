@@ -31,10 +31,6 @@ class MovieDetailPageInteractor : PresenterToInteractorMovieDetailPageProtocol {
                         
                         self.movieDetailPagePresenter?.toPresenter(movieDetail: movie)
                     }
-                       
-                        
-                    
-                    
                 }catch{
                     
                 }
