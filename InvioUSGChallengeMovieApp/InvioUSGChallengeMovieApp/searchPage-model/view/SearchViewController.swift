@@ -7,13 +7,16 @@
 
 import UIKit
 import Kingfisher
-
+import SDWebImage
+import Lottie
 class SearchViewController: UIViewController {
     @IBOutlet private weak var movieCollectionView: UICollectionView!
     var searchPageObject :  ViewtoPresenterSearchPageProtocol?
     @IBOutlet weak var movieResultCountLabel: UILabel!
     var movieList = [Movie]()
     @IBOutlet weak var searchMovieTextField: UITextField!
+    var animationView :   AnimationView?
+
     
     @IBOutlet weak var loadingAnimation: UIActivityIndicatorView!
     override func viewDidLoad() {
@@ -72,11 +75,17 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : SearchPageCollectionViewCell = movieCollectionView.dequeueReusableCell(withReuseIdentifier: "movieImageCell", for: indexPath) as! SearchPageCollectionViewCell
         let movie = movieList[indexPath.item]
-        let imageUrl = URL(string: movie.Poster!)
-        cell.movieImage.kf.setImage(with: imageUrl)
+        if movie.Poster == "N/A" {
+            print("Cell name \(movie.Title)")
+            cell.movieImage.image = UIImage(named: "noneImage")
+        }else{
+            let imageUrl = URL(string: movie.Poster!)
+            cell.movieImage.kf.setImage(with: imageUrl)
+        }
         cell.movieName.text = movie.Title
         cell.layer.cornerRadius = 18
         return cell
+     
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -25,6 +25,9 @@
 		7D3B1D7C28EB3A760029BB5B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7B28EB3A760029BB5B /* Movie.swift */; };
 		7D3B1D7E28EB3D770029BB5B /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */; };
 		7D3B1D8128EB42700029BB5B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D8028EB42700029BB5B /* String+Extensions.swift */; };
+		7D8A6EB628ECA297005C811A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7D8A6EB528ECA297005C811A /* Lottie */; };
+		7D8A6EBF28ECA903005C811A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D8A6EBE28ECA903005C811A /* SDWebImage */; };
+		7D8A6EC528ECAC91005C811A /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A6EC428ECAC91005C811A /* loading.json */; };
 		7DFDAA8628EB730E004ED57B /* MovieDetailPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8528EB730E004ED57B /* MovieDetailPageProtocols.swift */; };
 		7DFDAA8928EB7568004ED57B /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8828EB7568004ED57B /* MovieDetail.swift */; };
 		7DFDAA8B28EB7638004ED57B /* MovieDetailPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8A28EB7638004ED57B /* MovieDetailPageRouter.swift */; };
@@ -52,6 +55,8 @@
 		7D3B1D7B28EB3A760029BB5B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
 		7D3B1D8028EB42700029BB5B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7D8A6EC428ECAC91005C811A /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loading.json; path = ../../../../../../../Downloads/loading.json; sourceTree = "<group>"; };
+		7D8A6EC628ECACF1005C811A /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		7DFDAA8528EB730E004ED57B /* MovieDetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPageProtocols.swift; sourceTree = "<group>"; };
 		7DFDAA8828EB7568004ED57B /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		7DFDAA8A28EB7638004ED57B /* MovieDetailPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPageRouter.swift; sourceTree = "<group>"; };
@@ -67,6 +72,8 @@
 			files = (
 				7D3B1D7228EB1B2D0029BB5B /* Kingfisher in Frameworks */,
 				7D3B1D6F28EB1B1E0029BB5B /* Alamofire in Frameworks */,
+				7D8A6EBF28ECA903005C811A /* SDWebImage in Frameworks */,
+				7D8A6EB628ECA297005C811A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +104,7 @@
 				7D3B1D4828EAEC0E0029BB5B /* searchPage-model */,
 				7D3B1D3428EAEA670029BB5B /* AppDelegate.swift */,
 				7D3B1D3628EAEA670029BB5B /* SceneDelegate.swift */,
+				7D8A6EC628ECACF1005C811A /* loading.json */,
 				7D3B1D3A28EAEA670029BB5B /* Main.storyboard */,
 				7D3B1D3D28EAEA6A0029BB5B /* Assets.xcassets */,
 				7D3B1D3F28EAEA6A0029BB5B /* LaunchScreen.storyboard */,
@@ -224,6 +232,7 @@
 		7D3B1D5A28EB04780029BB5B /* SearhCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				7D8A6EC428ECAC91005C811A /* loading.json */,
 				7D3B1D6728EB05980029BB5B /* SearchPageCollectionViewCell.swift */,
 				7D3B1D6828EB05980029BB5B /* SearchPageCollectionViewCell.xib */,
 			);
@@ -266,6 +275,8 @@
 			packageProductDependencies = (
 				7D3B1D6E28EB1B1E0029BB5B /* Alamofire */,
 				7D3B1D7128EB1B2D0029BB5B /* Kingfisher */,
+				7D8A6EB528ECA297005C811A /* Lottie */,
+				7D8A6EBE28ECA903005C811A /* SDWebImage */,
 			);
 			productName = InvioUSGChallengeMovieApp;
 			productReference = 7D3B1D3128EAEA670029BB5B /* InvioUSGChallengeMovieApp.app */;
@@ -298,6 +309,8 @@
 			packageReferences = (
 				7D3B1D6D28EB1B1E0029BB5B /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7D3B1D7028EB1B2D0029BB5B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7D8A6EB428ECA297005C811A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				7D8A6EBD28ECA903005C811A /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 7D3B1D3228EAEA670029BB5B /* Products */;
 			projectDirPath = "";
@@ -315,6 +328,7 @@
 			files = (
 				7D3B1D4128EAEA6A0029BB5B /* LaunchScreen.storyboard in Resources */,
 				7D3B1D3E28EAEA6A0029BB5B /* Assets.xcassets in Resources */,
+				7D8A6EC528ECAC91005C811A /* loading.json in Resources */,
 				7D3B1D6A28EB05980029BB5B /* SearchPageCollectionViewCell.xib in Resources */,
 				7D3B1D3C28EAEA670029BB5B /* Main.storyboard in Resources */,
 			);
@@ -582,6 +596,22 @@
 				kind = branch;
 			};
 		};
+		7D8A6EB428ECA297005C811A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		7D8A6EBD28ECA903005C811A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -594,6 +624,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D3B1D7028EB1B2D0029BB5B /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7D8A6EB528ECA297005C811A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D8A6EB428ECA297005C811A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		7D8A6EBE28ECA903005C811A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D8A6EBD28ECA903005C811A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
