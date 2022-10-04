@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var movieResultCountLabel: UILabel!
     var movieList = [Movie]()
     @IBOutlet weak var searchMovieTextField: UITextField!
+    
+    @IBOutlet weak var loadingAnimation: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchPageRouter.creteModel(ref: self)
@@ -22,17 +24,23 @@ class SearchViewController: UIViewController {
         movieResultCountLabel.isHidden = true
         self.movieCollectionView.register(UINib(nibName: "SearchPageCollectionViewCell", bundle: nil),forCellWithReuseIdentifier:"movieImageCell")
         setupUI()
+        loadingAnimation.startAnimating()
     }
 }
 
 // MARK : -Search Action fetch connet
 extension SearchViewController {
     @IBAction func searchMovieAction(_ sender: Any) {
+        self.loadingAnimation.isHidden = false
+        self.loadingAnimation.startAnimating()
         if searchMovieTextField.text == "" {
             alertMessage(title: "Error", message: "Enter Movie to Search")
         }else{
             let searchText = searchMovieTextField.text?.capitalizeFirstLetter()
             self.searchPageObject?.getMovieAction(searchText: searchText!)
+            self.loadingAnimation.stopAnimating()
+            self.loadingAnimation.isHidden = true
+            
         }
     }
 }
@@ -41,6 +49,8 @@ extension SearchViewController : PresenterToViewSearchPageProtocol {
     func toView(movieList: Array<Movie>) {
         self.movieList = movieList
         DispatchQueue.main.async {
+            self.loadingAnimation.stopAnimating()
+            self.loadingAnimation.isHidden = true
             print("Count movie \(self.movieList.count)")
             if self.movieList.count == 0 {
                 self.alertMessage(title: "Error", message: "No Movies")

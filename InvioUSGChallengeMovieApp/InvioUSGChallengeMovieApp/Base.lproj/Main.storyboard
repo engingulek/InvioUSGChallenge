@@ -25,6 +25,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="63p-aI-wkm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="601.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" systemColor="systemBlueColor"/>
+                                </activityIndicatorView>
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkW-bV-2kM">
@@ -70,6 +75,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movie App" id="5QR-DL-MMd"/>
                     <connections>
+                        <outlet property="loadingAnimation" destination="63p-aI-wkm" id="9jQ-Yh-rjB"/>
                         <outlet property="movieCollectionView" destination="bqw-ZZ-UuP" id="CnD-8Q-FIK"/>
                         <outlet property="movieResultCountLabel" destination="Qd8-Vj-hRA" id="f8x-Fy-Dbc"/>
                         <outlet property="searchMovieTextField" destination="wNg-s9-Asb" id="W91-Za-LxX"/>
@@ -274,6 +280,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
