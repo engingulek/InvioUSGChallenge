@@ -7,14 +7,14 @@
 
 import UIKit
 import Kingfisher
-import Lottie
+
 class SearchViewController: UIViewController {
     @IBOutlet private weak var movieCollectionView: UICollectionView!
     var searchPageObject :  ViewtoPresenterSearchPageProtocol?
     @IBOutlet weak var movieResultCountLabel: UILabel!
     var movieList = [Movie]()
     @IBOutlet weak var searchMovieTextField: UITextField!
-    var animationView :   AnimationView?
+   
 
     
     @IBOutlet weak var loadingAnimation: UIActivityIndicatorView!
@@ -27,6 +27,32 @@ class SearchViewController: UIViewController {
         self.movieCollectionView.register(UINib(nibName: "SearchPageCollectionViewCell", bundle: nil),forCellWithReuseIdentifier:"movieImageCell")
         setupUI()
         loadingAnimation.startAnimating()
+    }
+    
+    // MARK: - Year Aligment Action
+    @IBAction func yearAligmentButtonAction(_ sender: Any) {
+        
+        if movieList.isEmpty {
+            self.alertMessage(title: "Warning", message: "Please perform the movie search first")
+        }else{
+            let actionSheetController = UIAlertController(title: "Aligment", message: "Select Aligment Type", preferredStyle: .actionSheet)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
+            /// oldToNewAction
+            let oldToNewAction = UIAlertAction(title: "Old To New", style: .default) { action in
+                
+            }
+            
+            ///newToOldAciton
+            let newToOldAction = UIAlertAction(title: "New To Old", style: .default) { action in
+                
+            }
+            
+            actionSheetController.addAction(oldToNewAction)
+            actionSheetController.addAction(newToOldAction)
+            actionSheetController.addAction(cancelAction)
+            self.present(actionSheetController, animated: true)
+            
+        }
     }
 }
 
@@ -108,11 +134,10 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
     // MARK: -AlertMessage
     private func alertMessage(title:String,message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancelAlertAction = UIAlertAction(title: "OKey", style: .cancel)
+        let cancelAlertAction = UIAlertAction(title: "Okey", style: .cancel)
         alert.addAction(cancelAlertAction)
         self.present(alert, animated: true)
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMovieDetail" {
@@ -123,6 +148,9 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
         }
     }
 }
+
+
+
 
 
 

@@ -74,7 +74,13 @@
                             <constraint firstItem="bqw-ZZ-UuP" firstAttribute="top" secondItem="jkW-bV-2kM" secondAttribute="bottom" constant="60" id="teP-tS-ISZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Movie App" id="5QR-DL-MMd"/>
+                    <navigationItem key="navigationItem" title="Movie App" id="5QR-DL-MMd">
+                        <barButtonItem key="rightBarButtonItem" title="Aligment" id="rYL-c4-H16">
+                            <connections>
+                                <action selector="yearAligmentButtonAction:" destination="BYZ-38-t0r" id="MgU-0E-3LS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="loadingAnimation" destination="63p-aI-wkm" id="9jQ-Yh-rjB"/>
                         <outlet property="movieCollectionView" destination="bqw-ZZ-UuP" id="CnD-8Q-FIK"/>
@@ -283,7 +289,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="noneImage" width="512" height="512"/>
+        <image name="noneImage" width="170.5" height="170.5"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
