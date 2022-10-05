@@ -134,7 +134,7 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
     // MARK: -AlertMessage
     private func alertMessage(title:String,message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancelAlertAction = UIAlertAction(title: "Okey", style: .cancel)
+        let cancelAlertAction = UIAlertAction(title: "OKey", style: .cancel)
         alert.addAction(cancelAlertAction)
         self.present(alert, animated: true)
     }
