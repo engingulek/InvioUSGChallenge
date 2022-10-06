@@ -30,3 +30,8 @@ protocol PresenterToViewSearchPageProtocol {
 protocol PresenterToRouterSearchPageProtocol {
     static func creteModel(ref:SearchViewController)
 }
+
+protocol SearchWebServiceProtocol {
+    func getSearchMovie(searchText:String,completion: @escaping (Result<MovieResult,Error>)->Void)
+    
+}

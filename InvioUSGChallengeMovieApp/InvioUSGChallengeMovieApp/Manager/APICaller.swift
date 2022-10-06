@@ -13,21 +13,21 @@ struct Constanst {
     static let apiKey =  "4ad7f607"
 }
 
-class APICaller {
+class APICaller : SearchWebServiceProtocol  {
     static let shared = APICaller()
-    func getSearchMovie(searchText:String,completion: @escaping (Result<[Movie],Error>)->Void) {
+    func getSearchMovie(searchText:String,completion: @escaping (Result<MovieResult,Error>)->Void) {
         AF.request("\(Constanst.baseUrl)s=\(searchText)&apikey=\(Constanst.apiKey)",method: .get).response{ response in
             if let data = response.data {
                 do{
                     
                     let result = try JSONDecoder().decode(MovieResult.self, from: data)
                     if result.Response == "True" {
-                        if let movies = result.Search {
-                            completion(.success(movies))
-                        }
+                      
+                            completion(.success(result))
+                        
                     }else{
-                        let nullMovie = [Movie]()
-                        completion(.success(nullMovie))
+                        
+                        completion(.success(result))
                     }
                 }catch{
                     completion(.failure(error))
@@ -36,7 +36,9 @@ class APICaller {
             }
         }
     }
-    
+}
+
+extension APICaller {
     func getMovieDetail(movieImdbId:String,completion: @escaping(Result<MovieDetail,Error>)->Void){
         AF.request("\(Constanst.baseUrl)i=\(movieImdbId)&apikey=\(Constanst.apiKey)&plot=full",method: .get).response{ response in
             if let data = response.data {
@@ -69,5 +71,4 @@ class APICaller {
         
         
     }
-    
 }

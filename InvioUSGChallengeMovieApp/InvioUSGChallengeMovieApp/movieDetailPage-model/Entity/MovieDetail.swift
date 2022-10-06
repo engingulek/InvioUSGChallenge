@@ -32,7 +32,7 @@ struct MovieDetail : Codable {
         self.Language = Language
         self.Country = Country
         self.Plot = Plot
-            self.imdbRating = imdbRating
+        self.imdbRating = imdbRating
         self.Response = Response
         
     }
