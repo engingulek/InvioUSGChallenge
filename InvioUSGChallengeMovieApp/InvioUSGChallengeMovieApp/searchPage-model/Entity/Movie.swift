@@ -14,12 +14,8 @@ import Foundation
 struct Movie : Codable {
     var imdbID:String?
     var Title:String
+    var Year:String?
     var Poster:String?
-    
-  
-    
-    
-   
 }
 
 

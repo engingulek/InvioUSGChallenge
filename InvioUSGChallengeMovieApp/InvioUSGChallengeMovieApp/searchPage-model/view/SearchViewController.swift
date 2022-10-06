@@ -39,12 +39,17 @@ class SearchViewController: UIViewController {
             let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
             /// oldToNewAction
             let oldToNewAction = UIAlertAction(title: "Old To New", style: .default) { action in
+                let aligmentMoveiList = self.movieList.sorted(by: { $0.Year! < $1.Year! })
+                self.movieList = aligmentMoveiList
+                self.movieCollectionView.reloadData()
                 
             }
             
             ///newToOldAciton
             let newToOldAction = UIAlertAction(title: "New To Old", style: .default) { action in
-                
+                let aligmentMoveiList = self.movieList.sorted(by: { $0.Year! > $1.Year! })
+                self.movieList = aligmentMoveiList
+                self.movieCollectionView.reloadData()
             }
             
             actionSheetController.addAction(oldToNewAction)
@@ -108,6 +113,7 @@ extension SearchViewController : UICollectionViewDelegate, UICollectionViewDataS
             cell.movieImage.kf.setImage(with: imageUrl)
         }
         cell.movieName.text = movie.Title
+        cell.movieYear.text = movie.Year
         cell.layer.cornerRadius = 18
         return cell
      
