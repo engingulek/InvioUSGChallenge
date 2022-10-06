@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchMovieTextField: UITextField!
     @IBOutlet weak var loadingAnimation: UIActivityIndicatorView!
     
+    @IBOutlet weak var searchButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchPageRouter.creteModel(ref: self)

@@ -85,6 +85,7 @@
                         <outlet property="loadingAnimation" destination="63p-aI-wkm" id="9jQ-Yh-rjB"/>
                         <outlet property="movieCollectionView" destination="bqw-ZZ-UuP" id="CnD-8Q-FIK"/>
                         <outlet property="movieResultCountLabel" destination="Qd8-Vj-hRA" id="f8x-Fy-Dbc"/>
+                        <outlet property="searchButton" destination="jkW-bV-2kM" id="3Ca-e1-YUl"/>
                         <outlet property="searchMovieTextField" destination="wNg-s9-Asb" id="W91-Za-LxX"/>
                         <segue destination="Vle-Ck-jFt" kind="presentation" identifier="toMovieDetail" id="CXP-5B-2Tc"/>
                     </connections>
