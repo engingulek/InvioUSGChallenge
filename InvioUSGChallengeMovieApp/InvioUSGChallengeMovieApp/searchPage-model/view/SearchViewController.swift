@@ -14,10 +14,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var movieResultCountLabel: UILabel!
     var movieList = [Movie]()
     @IBOutlet weak var searchMovieTextField: UITextField!
-   
-
-    
     @IBOutlet weak var loadingAnimation: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchPageRouter.creteModel(ref: self)
@@ -42,7 +40,6 @@ class SearchViewController: UIViewController {
                 let aligmentMoveiList = self.movieList.sorted(by: { $0.Year! < $1.Year! })
                 self.movieList = aligmentMoveiList
                 self.movieCollectionView.reloadData()
-                
             }
             
             ///newToOldAciton

@@ -25,6 +25,7 @@
 		7D3B1D7C28EB3A760029BB5B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7B28EB3A760029BB5B /* Movie.swift */; };
 		7D3B1D7E28EB3D770029BB5B /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */; };
 		7D3B1D8128EB42700029BB5B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D8028EB42700029BB5B /* String+Extensions.swift */; };
+		7D8392A028EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83929F28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.swift */; };
 		7D8A6ECB28ECBD2B005C811A /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A6ECA28ECBD2B005C811A /* movie.json */; };
 		7DFDAA8628EB730E004ED57B /* MovieDetailPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8528EB730E004ED57B /* MovieDetailPageProtocols.swift */; };
 		7DFDAA8928EB7568004ED57B /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8828EB7568004ED57B /* MovieDetail.swift */; };
@@ -33,6 +34,16 @@
 		7DFDAA8F28EB7DE7004ED57B /* MovieDetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA8E28EB7DE7004ED57B /* MovieDetailPageInteractor.swift */; };
 		7DFDAA9128EB8AF3004ED57B /* MovieDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDAA9028EB8AF3004ED57B /* MovieDetailResult.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D8392A128EECFED002C7F05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D3B1D2928EAEA660029BB5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D3B1D3028EAEA660029BB5B;
+			remoteInfo = InvioUSGChallengeMovieApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7D3B1D3128EAEA670029BB5B /* InvioUSGChallengeMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvioUSGChallengeMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +64,8 @@
 		7D3B1D7B28EB3A760029BB5B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		7D3B1D7D28EB3D770029BB5B /* MovieResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
 		7D3B1D8028EB42700029BB5B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7D83929D28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvioUSGChallengeMovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D83929F28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvioUSGChallengeMovieAppTests.swift; sourceTree = "<group>"; };
 		7D8A6ECA28ECBD2B005C811A /* movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = movie.json; path = ../../../../Downloads/movie.json; sourceTree = "<group>"; };
 		7DFDAA8528EB730E004ED57B /* MovieDetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPageProtocols.swift; sourceTree = "<group>"; };
 		7DFDAA8828EB7568004ED57B /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
@@ -72,6 +85,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D83929A28EECFED002C7F05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3B1D3328EAEA670029BB5B /* InvioUSGChallengeMovieApp */,
+				7D83929E28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests */,
 				7D3B1D3228EAEA670029BB5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3B1D3128EAEA670029BB5B /* InvioUSGChallengeMovieApp.app */,
+				7D83929D28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +263,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7D83929E28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D83929F28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.swift */,
+			);
+			path = InvioUSGChallengeMovieAppTests;
+			sourceTree = "<group>";
+		};
 		7DFDAA8728EB755D004ED57B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +304,24 @@
 			productReference = 7D3B1D3128EAEA670029BB5B /* InvioUSGChallengeMovieApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7D83929C28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D8392A528EECFED002C7F05 /* Build configuration list for PBXNativeTarget "InvioUSGChallengeMovieAppTests" */;
+			buildPhases = (
+				7D83929928EECFED002C7F05 /* Sources */,
+				7D83929A28EECFED002C7F05 /* Frameworks */,
+				7D83929B28EECFED002C7F05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D8392A228EECFED002C7F05 /* PBXTargetDependency */,
+			);
+			name = InvioUSGChallengeMovieAppTests;
+			productName = InvioUSGChallengeMovieAppTests;
+			productReference = 7D83929D28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -286,6 +334,10 @@
 				TargetAttributes = {
 					7D3B1D3028EAEA660029BB5B = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					7D83929C28EECFED002C7F05 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 7D3B1D3028EAEA660029BB5B;
 					};
 				};
 			};
@@ -307,6 +359,7 @@
 			projectRoot = "";
 			targets = (
 				7D3B1D3028EAEA660029BB5B /* InvioUSGChallengeMovieApp */,
+				7D83929C28EECFED002C7F05 /* InvioUSGChallengeMovieAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,6 +374,13 @@
 				7D3B1D3E28EAEA6A0029BB5B /* Assets.xcassets in Resources */,
 				7D3B1D6A28EB05980029BB5B /* SearchPageCollectionViewCell.xib in Resources */,
 				7D3B1D3C28EAEA670029BB5B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D83929B28EECFED002C7F05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +412,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D83929928EECFED002C7F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8392A028EECFED002C7F05 /* InvioUSGChallengeMovieAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D8392A228EECFED002C7F05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D3B1D3028EAEA660029BB5B /* InvioUSGChallengeMovieApp */;
+			targetProxy = 7D8392A128EECFED002C7F05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7D3B1D3A28EAEA670029BB5B /* Main.storyboard */ = {
@@ -546,6 +622,42 @@
 			};
 			name = Release;
 		};
+		7D8392A328EECFED002C7F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34G99QRS57;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.engingulek.InvioUSGChallengeMovieAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InvioUSGChallengeMovieApp.app/InvioUSGChallengeMovieApp";
+			};
+			name = Debug;
+		};
+		7D8392A428EECFED002C7F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34G99QRS57;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.engingulek.InvioUSGChallengeMovieAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InvioUSGChallengeMovieApp.app/InvioUSGChallengeMovieApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -563,6 +675,15 @@
 			buildConfigurations = (
 				7D3B1D4628EAEA6A0029BB5B /* Debug */,
 				7D3B1D4728EAEA6A0029BB5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D8392A528EECFED002C7F05 /* Build configuration list for PBXNativeTarget "InvioUSGChallengeMovieAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D8392A328EECFED002C7F05 /* Debug */,
+				7D8392A428EECFED002C7F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
