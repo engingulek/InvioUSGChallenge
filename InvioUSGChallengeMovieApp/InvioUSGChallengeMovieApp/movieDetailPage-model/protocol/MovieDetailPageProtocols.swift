@@ -16,13 +16,11 @@ protocol ViewToPresenterMovieDetailPageProtocol {
 }
 
 
-
 protocol PresenterToInteractorMovieDetailPageProtocol {
     var movieDetailPagePresenter : InteractorToPresenterMovieDetailPageProtocol? {get set}
     func getMovieDetail(movieImdbId:String)
     
 }
-
 
 protocol InteractorToPresenterMovieDetailPageProtocol {
     func toPresenter(movieDetail:MovieDetail)

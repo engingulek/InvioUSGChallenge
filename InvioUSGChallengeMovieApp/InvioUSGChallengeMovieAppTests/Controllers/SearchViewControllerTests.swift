@@ -11,16 +11,18 @@ import XCTest
 class SearchViewControllerTests: XCTestCase {
     var storyboard: UIStoryboard!
     var svc : SearchViewController!
-
+ 
     override func setUpWithError() throws {
         storyboard = UIStoryboard(name: "Main", bundle: nil)
         svc = storyboard.instantiateViewController(identifier: "searchViewController") as? SearchViewController
         svc.loadViewIfNeeded()
+
     }
 
     override func tearDownWithError() throws {
        storyboard = nil
         svc = nil
+      
     }
     
     func testSearchViewController_WhenCreated_TextFieldEmpty() throws {
@@ -37,10 +39,6 @@ class SearchViewControllerTests: XCTestCase {
         XCTAssertEqual(searchButtonActions.first,"searchMovieAction:","There is no action with a name searchMovieAction assigned to signup button")
         
     }
-
- 
-
-
 
 }
 

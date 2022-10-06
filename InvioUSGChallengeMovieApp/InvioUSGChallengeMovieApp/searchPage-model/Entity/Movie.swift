@@ -7,10 +7,6 @@
 
 import Foundation
 
-
-
-
-
 struct Movie : Codable {
     var imdbID:String?
     var Title:String

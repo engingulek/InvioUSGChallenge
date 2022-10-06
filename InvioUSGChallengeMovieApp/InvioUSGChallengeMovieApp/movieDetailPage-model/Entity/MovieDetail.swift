@@ -21,8 +21,7 @@ struct MovieDetail : Codable {
     var Response : String?
     
     
-    init (
-        Poster:String,Title: String,Director:String,Genre:String,Runtime:String,Writer:String,Language:String,Country:String,Plot:String,imdbRating:String,Response:String) {
+    init (Poster:String,Title: String,Director:String,Genre:String,Runtime:String,Writer:String,Language:String,Country:String,Plot:String,imdbRating:String,Response:String) {
             self.Poster = Poster
         self.Title = Title
         self.Director = Director

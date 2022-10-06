@@ -15,9 +15,5 @@ class MovieDetailPageRouter : PresenterToRouterMovieDetailPageProtocol {
         ref.movieDetailPageObject?.interactor = MovieDetailPageInteractor()
         ref.movieDetailPageObject?.interactor?.movieDetailPagePresenter = presenter
         ref.movieDetailPageObject?.movieDetailPageView = ref
-       
- 
     }
-    
-    
 }

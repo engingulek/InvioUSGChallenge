@@ -32,12 +32,7 @@ class SearchViewWebServiceTests: XCTestCase {
                 
             }
         }
-        
         self.wait(for: [expectation], timeout: 5)
         
     }
-
-   
-
-   
 }

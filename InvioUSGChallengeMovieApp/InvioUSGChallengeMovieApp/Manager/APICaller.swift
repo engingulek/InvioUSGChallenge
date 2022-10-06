@@ -64,11 +64,7 @@ extension APICaller {
                     completion(.failure(error))
                     
                 }
-            
             }
-            
         }
-        
-        
     }
 }

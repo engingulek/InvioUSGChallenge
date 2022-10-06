@@ -21,7 +21,6 @@ class SearchPageInteractor : PresenterToInteractorSearchPageProtocol {
                     self.searhPagePresenter?.toPresenter(movieList: nullMovie)
                 }
                 
-                
             case .failure(let error):
                 print(error.localizedDescription)
                 
