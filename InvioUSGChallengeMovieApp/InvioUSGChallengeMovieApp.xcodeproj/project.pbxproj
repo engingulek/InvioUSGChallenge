@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D1EE27F28EEE62E000C223E /* MockSearchWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1EE27E28EEE62E000C223E /* MockSearchWebService.swift */; };
+		7D1EE28228EEED02000C223E /* SearchViewWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1EE28128EEED02000C223E /* SearchViewWebServiceTests.swift */; };
 		7D3B1D3528EAEA670029BB5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3428EAEA670029BB5B /* AppDelegate.swift */; };
 		7D3B1D3728EAEA670029BB5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3628EAEA670029BB5B /* SceneDelegate.swift */; };
 		7D3B1D3928EAEA670029BB5B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B1D3828EAEA670029BB5B /* SearchViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		7D1EE27E28EEE62E000C223E /* MockSearchWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchWebService.swift; sourceTree = "<group>"; };
+		7D1EE28128EEED02000C223E /* SearchViewWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewWebServiceTests.swift; sourceTree = "<group>"; };
 		7D3B1D3128EAEA670029BB5B /* InvioUSGChallengeMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvioUSGChallengeMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3B1D3428EAEA670029BB5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3B1D3628EAEA670029BB5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		7D1EE28028EEEC4C000C223E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7D1EE28128EEED02000C223E /* SearchViewWebServiceTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			files = (
 				7D1EE27F28EEE62E000C223E /* MockSearchWebService.swift in Sources */,
 				7D8392A728EED7F3002C7F05 /* SearchViewControllerTests.swift in Sources */,
+				7D1EE28228EEED02000C223E /* SearchViewWebServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
