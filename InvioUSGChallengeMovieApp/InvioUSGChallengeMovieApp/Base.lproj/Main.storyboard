@@ -96,7 +96,7 @@
         <!--Movie Detail-->
         <scene sceneID="Yx5-2H-7Ct">
             <objects>
-                <viewController id="Vle-Ck-jFt" customClass="MovieDetailPageViewController" customModule="InvioUSGChallengeMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="movieDetailViewController" id="Vle-Ck-jFt" customClass="MovieDetailPageViewController" customModule="InvioUSGChallengeMovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGB-Ik-bnZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

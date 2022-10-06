@@ -11,7 +11,7 @@ class MovieDetailPageInteractor : PresenterToInteractorMovieDetailPageProtocol {
     var movieDetailPagePresenter: InteractorToPresenterMovieDetailPageProtocol?
     
     func getMovieDetail(movieImdbId: String) {
-        AF.request("http://www.omdbapi.com/?i=\(movieImdbId)&apikey=4ad7f607&plot=full",method: .get).response{ response in
+        AF.request("\(Constanst.baseUrl)i=\(movieImdbId)&apikey=\(Constanst.apiKey)&plot=full",method: .get).response{ response in
             if let data = response.data {
                 do {
                     let result = try JSONDecoder().decode(MovieDetail.self, from: data)
